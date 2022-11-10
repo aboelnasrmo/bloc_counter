@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:progoneblocpract/business_logic/cubits/cubit/counter_cubit.dart';
 
-// ignore: must_be_immutable
-class HomeScreen extends StatelessWidget {
-  HomeScreen({super.key, this.title});
-  String? title;
+import '../../business_logic/cubits/cubit/counter_cubit.dart';
+
+class ThirdScreen extends StatelessWidget {
+  const ThirdScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home page'),
+        title: const Text('Second Screen'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -48,12 +48,6 @@ class HomeScreen extends StatelessWidget {
               ),
             ],
           ),
-          MaterialButton(
-              color: Colors.amber,
-              child: const Text('Go to the second Screen'),
-              onPressed: () {
-                Navigator.of(context).pushNamed('/second');
-              }),
         ],
       ),
     );
