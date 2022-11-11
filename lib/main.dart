@@ -4,17 +4,12 @@ import 'package:progoneblocpract/business_logic/cubits/cubit/counter_cubit.dart'
 import 'package:progoneblocpract/presentation/router/app_router.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+class MyApp extends StatelessWidget {
+  MyApp({super.key});
 
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
   final AppRouter _appRouter = AppRouter();
 
   // This widget is the root of your application.
@@ -31,11 +26,5 @@ class _MyAppState extends State<MyApp> {
         onGenerateRoute: _appRouter.onGeneratedRoute,
       ),
     );
-  }
-
-  @override
-  void dispose() {
-    _appRouter.dispose();
-    super.dispose();
   }
 }
