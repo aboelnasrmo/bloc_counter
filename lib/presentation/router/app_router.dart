@@ -19,9 +19,7 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const ThirdScreen(),
         );
-
-      default:
-        return null;
     }
+    return null;
   }
 }
